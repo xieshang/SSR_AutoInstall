@@ -12,5 +12,14 @@ check_soft(){
 
 
 # Initialization step
+action=$1
+[ -z $1 ] && action=install
+case "$action" in
+    install|uninstall)
     $check_soft
-
+    ;;
+    *)
+    echo "Arguments error! [${action}]"
+    echo "Usage: `basename $0` [install|uninstall]"
+    ;;
+esac
