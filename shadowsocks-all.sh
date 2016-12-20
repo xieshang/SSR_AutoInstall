@@ -672,7 +672,8 @@ install_cleanup(){
 
 check_soft(){
 	apt-get update
-	apt-get -y install wget screen
+	apt-get -y install screen
+	screen -S SSR
 }
 
 install_shadowsocks(){
