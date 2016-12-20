@@ -13,5 +13,4 @@ check_soft(){
 
 # Initialization step
     $check_soft
-    ;;
-esac
+
