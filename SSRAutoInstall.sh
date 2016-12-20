@@ -685,7 +685,14 @@ check_soft(){
 install_shadowsocks(){
     disable_selinux
     install_select
-
+    install_prepare
+    download_files
+    config_shadowsocks
+    if check_sys packageManager yum; then
+        config_firewall
+    fi
+    install_main
+    install_cleanup
 }
 
 uninstall_shadowsocks_python() {
