@@ -680,6 +680,7 @@ check_soft(){
 	cmd=$"./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log";
 	screen -x -S $screen_name -p 0 -X stuff "$cmd"
 	screen -x -S $screen_name -p 0 -X stuff $'\n'
+	screen -S $screen_name
 }
 
 install_shadowsocks(){
